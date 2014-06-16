@@ -4,12 +4,13 @@
 \usepackage{hyperref}
 \usecolortheme{seagull}
 
-\title{USRP based Cognitive Radio Test-bed using OpenBTS}
-\author{Abrar Ahmad (113310017) \\ Swrangsar Basumatary (09d07040) }
+\title{Cognitive Radio Test-Bed using OpenBTS}
+\author{Swrangsar Basumatary (09d07040)}
 \institute{Department of Electrical Engineering \\ IIT Bombay, Powai}
 \date{June 2014}
 
 \setbeamertemplate{frametitle}[default][center]
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
     
 \begin{document}
   \frame{\titlepage}
@@ -17,9 +18,9 @@
 
 	\begin{frame}{Problem Statement}
     	\begin{itemize}
-    		\item To develop a testbed for cognitive radio demonstrating coexistence of primary (licensed) users and secondary (unlicensed users)
-    		\item A two frequency testbed (channels used 945 MHz and 955 MHz)
-    		\item A four frequency testbed (936 MHz, 943 MHz, 950 MHz, 957 MHz)
+    		\item To develop a test-bed for cognitive radio demonstrating coexistence of primary (licensed) users and secondary (unlicensed users)
+    		\item A two frequency test-bed (channels used 945 MHz and 955 MHz)
+    		\item A four frequency test-bed (936 MHz, 943 MHz, 950 MHz, 957 MHz)
     	\end{itemize}
 	\end{frame}
 	
@@ -57,14 +58,14 @@
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Setup for the two-frequency testbed}
+  \begin{frame}{Setup for the two-frequency test-bed}
     \begin{figure}
       \centering
       \includegraphics[width=\linewidth]{img/freq2}
     \end{figure}
   \end{frame}
   
-  \begin{frame}{Setup for the four-frequency testbed}
+  \begin{frame}{Setup for the four-frequency test-bed}
     \begin{figure}
       \centering
       \includegraphics[width=\linewidth]{img/freq4}
@@ -89,10 +90,10 @@
     \begin{minipage}[t][0.8\textheight][t]{\textwidth}
       \begin{figure}
         \centering
-        \includegraphics[width=0.8\linewidth]{img/gsmArch}
+        \includegraphics[width=0.8\linewidth]{img/gsmNetwork}
       \end{figure}
       \vfill
-      \tiny{Source: \url{http://www.hill2dot0.com/wiki/index.php?title=Image:G2407\_GSM-Architecture.jpg}}
+      \tiny{Source: \url{http://gnuradio.org/redmine/attachments/download/156/fullnetwork.jpg}}
     \end{minipage}
   \end{frame}
  
@@ -163,6 +164,31 @@
       \item Extensions.conf
       \item Sqlite3.db
     \end{itemize}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.7\linewidth]{img/sip_conf}
+    \end{figure}
+  \end{frame}
+  
+  \begin{frame}{How to register a SIM in the network?}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.7\linewidth]{img/ext_conf}
+    \end{figure}
+  \end{frame}
+  
+  \begin{frame}{How to register a SIM in the network?}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.7\linewidth]{img/dialdata}
+    \end{figure}
+  \end{frame}
+  
+  \begin{frame}{How to register a SIM in the network?}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.7\linewidth]{img/sipbuddies}
+    \end{figure}
   \end{frame}
 
   \begin{frame}{Network organization for OpenBTS}
@@ -216,24 +242,21 @@
   \end{frame}
 
   \begin{frame}{Periodogram Analysis}
-Let $X[n]; n = 0,1...L-1$ be the discrete time signal which is  divided into 
-$M$ 
-finite length segments of equal length, where $N$ is the length of each segment  
-i.e. $ MN = L; X_{r}[n]; n = 0,1...N-1 $ is the $r$th segment and
-$ W[n]; n = 0,1...N-1 $ is 
-the window applied to each segment. The modified periodogram for the $r$th segment
- is,
-\begin{equation*}
-    I_{r}[k] = \frac{1}{NU} \left| V_{r}[k]\right|^2     \qquad k = 0,1...N-1 
-\end{equation*}
-where $V_{r}[k]$ is a N point DFT and $U$ is normalization factor i.e. , 
-$V_{r}[k] = DFT\{W[n]*X[n]\}$
-and $U = \frac{1}{N}(\sum_{n-0}^{N-1} (W[n])^2)$. The PSD of $X[n]$ sequence 
-is then the time averaged periodogram estimate ,
-\begin{equation*}
-    I[k] = \frac{1}{M}\left|\sum_{r=0}^{M-1}X_{r}[k]\right|
-\end{equation*}
-    
+    \begin{itemize}
+        \item $X[n]; n = 0,1...L-1$ is  divided into $M$ finite length 
+        segments $X_{r}[n]; n = 0,1...N-1 $
+        \item The modified periodogram for the $r$th segment is,
+          \begin{equation*}
+              I_{r}[k] = \frac{1}{NU} \left| V_{r}[k]\right|^2     \qquad k = 0,1...N-1 
+          \end{equation*}
+          where $V_{r}[k] = DFT\{W[n]*X[n]\}$, N point DFT
+          and $U = \frac{1}{N}(\sum_{n-0}^{N-1} (W[n])^2)$ is the normalization factor. 
+        \item The PSD of $X[n]$ sequence 
+          is then the time averaged periodogram estimate ,
+          \begin{equation*}
+              I[k] = \frac{1}{M}\left|\sum_{r=0}^{M-1}X_{r}[k]\right|
+          \end{equation*}
+    \end{itemize}
   \end{frame}
 
   
