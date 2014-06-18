@@ -98,44 +98,61 @@
   \end{frame}
  
   \begin{frame}{Software Defined Radio}
-    \begin{itemize}
-      \item What is software defined radio?
-      \item Block Diagram:
-    \end{itemize}
-    \begin{figure}
-      \centering
-      \includegraphics[width=\linewidth]{img/sdrBlock}
-    \end{figure}
+    \begin{minipage}[t][0.8\textheight][t]{\textwidth}
+      \begin{itemize}
+	\item What is software defined radio?
+	\item Block Diagram:
+      \end{itemize}
+      \begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/sdrBlock}
+      \end{figure}
+      \vfill
+      \tiny{Source: \texttt{Kranthi Ananthula. \emph{Experimental setup of cognitive radio test-bed using software
+defined radio.} Master's thesis, Department of Electrical Engineering, 2013.}}
+   \end{minipage}
   \end{frame}
 
   \begin{frame}{USRP}
-    \begin{itemize}
-      \item We have used the USRP N210 kit. It performs the task of: transmission, receiving and sensing
-      \item The kit is equipped with WBX daughter board which spans a spectrum range of: 50-2200MHz
-    \end{itemize}
-    \begin{figure}
-      \centering
-      \includegraphics[width=\linewidth]{img/usrpBlock}
-    \end{figure}
+    \begin{minipage}[t][0.8\textheight][t]{\textwidth}
+      \begin{itemize}
+	\item We have used the USRP N210 kit. It performs the task of: transmission, receiving and sensing
+	\item The kit is equipped with WBX daughter board which spans a spectrum range of: 50-2200MHz
+      \end{itemize}
+      \begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/usrpBlock}
+      \end{figure}
+      \vfill
+      \tiny{Source: \texttt{Kranthi Ananthula. \emph{Experimental setup of cognitive radio test-bed using software
+defined radio.} Master's thesis, Department of Electrical Engineering, 2013.}}
+   \end{minipage}
   \end{frame}
   
   \begin{frame}{GNURadio}
-    \begin{itemize}
-        \item What is GNU Radio?
-        \item Skeleton code spectrumsense.py
-        \item Block Diagram
-    \end{itemize}
-    \begin{figure}
-      \centering
-      \includegraphics[width=\linewidth]{img/gnuradio_architecture}
-    \end{figure}
+    \begin{minipage}[t][0.8\textheight][t]{\textwidth}
+      \begin{itemize}
+	  \item What is GNU Radio?
+	  \item Skeleton code spectrumsense.py
+	  \item Block Diagram
+      \end{itemize}
+      \begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/gnuradio_architecture}
+      \end{figure}
+   \end{minipage}
   \end{frame}
 
   \begin{frame}{Block diagram of SDR using USRP and GNURadio}
-    \begin{figure}
-      \centering
-      \includegraphics[width=\linewidth]{img/usrpGNURadioBlock}
-    \end{figure}
+    \begin{minipage}[t][0.8\textheight][t]{\textwidth}
+      \begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/usrpGNURadioBlock}
+      \end{figure}
+      \vfill
+      \tiny{Source: \texttt{Kranthi Ananthula. \emph{Experimental setup of cognitive radio test-bed using software
+defined radio.} Master's thesis, Department of Electrical Engineering, 2013.}}
+   \end{minipage}
   \end{frame}
 
   \begin{frame}{OpenBTS}
@@ -151,12 +168,7 @@
         \end{itemize}
     \end{itemize}
   \end{frame}
-  \begin{frame}{Block diagram of SDR using USRP and GNURadio}
-    \begin{figure}
-      \centering
-      \includegraphics[width=\linewidth]{img/usrpGNURadioBlock}
-    \end{figure}
-  \end{frame}
+  
 
   \begin{frame}{How to register a SIM in the network?}
     \begin{itemize}
@@ -192,10 +204,15 @@
   \end{frame}
 
   \begin{frame}{Network organization for OpenBTS}
-    \begin{figure}
-      \centering
-      \includegraphics[width=0.97\linewidth]{img/btsSimple}
-    \end{figure}
+    \begin{minipage}[t][0.8\textheight][t]{\textwidth}
+      \begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/btsSimple}
+      \end{figure}
+      \vfill
+      \tiny{Source: \url{https://wush.net/trac/rangepublic/attachment/wiki/WikiStart/
+OpenBTS-4.0-Manual.pdf}. [Accessed on May 27, 2014].}
+   \end{minipage}
   \end{frame}
   
   \begin{frame}{Spectrum sensing}
@@ -210,14 +227,19 @@
   \end{frame}
 
   \begin{frame}{Matched filter detection}
-    \begin{itemize}
-      \item Correlation with a filter whose response is matched with reference signal
-      \item Block diagram:
-    \end{itemize}
-    \begin{figure}
-      \centering
-      \includegraphics[width=0.97\linewidth]{img/matchedFilter}
-    \end{figure}
+    \begin{minipage}[t][0.8\textheight][t]{\textwidth}
+      \begin{itemize}
+	\item Correlation with a filter whose response is matched with reference signal
+	\item Block diagram:
+      \end{itemize}
+      \begin{figure}
+	\centering
+	\includegraphics[width=0.97\linewidth]{img/matchedFilter}
+      \end{figure}
+      \vfill
+      \tiny{Source: \texttt{Kranthi Ananthula. \emph{Experimental setup of cognitive radio test-bed using software
+defined radio.} Master's thesis, Department of Electrical Engineering, 2013.}}
+   \end{minipage}
   \end{frame}
 
    \begin{frame}{Energy detection technique}
@@ -229,15 +251,16 @@
             x(t) &= n(t), & H_0 \nonumber \\
             x(t) &= h(t)s(t) + n(t), & H_1 \nonumber
           \end{align}
-        \item Block diagram
       \end{itemize}
      \begin{figure}
         \centering
-        \includegraphics[width=0.8\linewidth]{img/energyDetection}
+        \includegraphics[width=0.59\linewidth]{img/energyDetection}
       \end{figure}
-      \vfill
-      \tiny{Source: \url{http://www.hindawi.com/journals/ijvt/2011/630467.fig.003.jpg} 
-      [Accessed  on Oct 22, 2013.]}
+      \tiny{Source: \texttt{D Cabric, A Tkachenko, and R W Brodersen.
+      Experimental study of spectrum sensing based on energy detection and network cooperation.\\
+      In \emph{TAPAS ’06 Proceedings
+of the first international workshop on Technology and policy for accessing spectrum},
+August 2006.}}
     \end{minipage}
   \end{frame}
 
